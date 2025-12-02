@@ -2,5 +2,5 @@
     font-family:'Press Start 2P', sans-serif;
     font-size: 25px;
     text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.815);
-    color: #fff;
+    color: var(--white);
 }

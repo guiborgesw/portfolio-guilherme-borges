@@ -1,8 +1,8 @@
 .main-section {
-    background-color: #5679B0;
+    background-color: var(--blue-500);
     padding-top: 50px;
     padding-bottom: 100px;
-    border-bottom: 10px solid #5679B0;
+    border-bottom: 10px solid var(--blue-500);
 }
 
 .main-section .main-title {
@@ -10,17 +10,17 @@
 }
 
 .main-section.-bgBlack {
-    background-color: #000;
+    background-color: var(--black);
 }
 
 .main-section.-bdFirst {
-    border-color: #4680DB;
+    border-color: var(--blue-300);
 }
 
 .main-section.-bgSecond {
-    background-color: #3B4487;
+    background-color: var(--blue-700);
 }
 
 .main-section.-bdBlack {
-    border-color: #000;
+    border-color: var(--black);
 }

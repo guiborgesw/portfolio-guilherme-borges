@@ -1,7 +1,7 @@
 .main-action {
     display: inline-flex;
     align-items: center;
-    color: #FFF;
+    color: var(--white);
     font-size: 20px;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -10,13 +10,13 @@
 }
 
 .main-action:hover {
-    color: #4680DB;
+    color: var(--blue-300);
     transform: scale(1.08);
 }
 
 .main-action:before {
     content: "";
-    background-color:#4680DB;
+    background-color:var(--blue-300);
     width: 10px;
     height: 10px;
     margin-right: 10px;

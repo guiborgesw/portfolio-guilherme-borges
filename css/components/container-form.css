@@ -1,5 +1,5 @@
 form {
-    background-color: #3A4042;
+    background-color: var(--gray-500);
 }
 
 .container-form {
@@ -10,7 +10,7 @@ form {
 .header-form {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--white);
     line-height: 1.5;
     font-size: 18px;
 }
@@ -25,7 +25,7 @@ form {
 .contact-form > input {
     display: flex;
     flex-direction: column;
-    border: 4px solid #000;
+    border: 4px solid var(--black);
     font-size: 25px;
     width: 500px;
     padding-left: 6px;
@@ -36,7 +36,7 @@ form {
 .contact-form > textarea {
     display: flex;
     flex-direction: column;
-    border: 4px solid #000;
+    border: 4px solid var(--black);
     border: border-box;
     font-size: 25px;
     width: 500px;

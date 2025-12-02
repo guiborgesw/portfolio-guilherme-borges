@@ -4,8 +4,10 @@
     --blue-700: #3B4487;
     --blue-900: #001366;
 
-    --black: #000000;
+    --gray-300: #666666;
+    --gray-500: #3A4042;
 
+    --black: #000000;
     --white: #FFFFFF;
 }
 
@@ -40,5 +42,15 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .container-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-button.-full {
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -14,7 +14,7 @@
     display: block;
     height: 6px;
     width: calc(100% - 100px);
-    background-color: #000;
+    background-color: var(--black);
 }
 
 .main-carousel::before {
@@ -24,7 +24,7 @@
     left: 0px;
     top: 38px;
     display: block;
-    border: 3px dashed #000;
+    border: 3px dashed var(--black);
     width: 100%;
 }
 

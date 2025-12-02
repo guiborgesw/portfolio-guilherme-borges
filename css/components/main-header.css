@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #001366;
-    border-bottom: 10px solid #000;
+    background-color: var(--blue-900);
+    border-bottom: 10px solid var(--black);
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
