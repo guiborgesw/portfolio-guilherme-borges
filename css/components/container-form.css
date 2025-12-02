@@ -1,0 +1,48 @@
+form {
+    background-color: #3A4042;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+}
+
+.header-form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.paragraph-city {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    padding-left: 10px;
+}
+
+.contact-form > input {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #000;
+    font-size: 25px;
+    width: 500px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 2% 0 5% 25%;
+}
+
+.contact-form > textarea {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #000;
+    border: border-box;
+    font-size: 25px;
+    width: 500px;
+    height: 220px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 2% 0 5% 25%;
+    resize: none;
+}
