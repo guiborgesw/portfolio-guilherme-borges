@@ -9,6 +9,11 @@
     margin-right: 30px;
 }
 
+.main-action:hover {
+    color: #4680DB;
+    transform: scale(1.08);
+}
+
 .main-action:before {
     content: "";
     background-color:#4680DB;
