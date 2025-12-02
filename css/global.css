@@ -1,0 +1,44 @@
+:root {
+    --blue-300: #4680DB;
+    --blue-500: #5679B0;
+    --blue-700: #3B4487;
+    --blue-900: #001366;
+
+    --black: #000000;
+
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+}
+
+body, h1, h2 , h3, figure {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: inherit;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+        scroll-behavior: smooth;
+    }
+
+    .body {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header {
+        font-size: 87.5%;
+    }
+
+    .wrapper-skill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
