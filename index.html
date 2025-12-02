@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..500&family=Press+Start+2P&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/components/button-arrow.css">
     <link rel="stylesheet" href="css/components/card-project.css">
@@ -24,8 +24,7 @@
     <link rel="stylesheet" href="css/components/main-header.css">
     <link rel="stylesheet" href="css/components/node-card.css">
     <link rel="stylesheet" href="css/components/progress-bar.css">
-    <link rel="stylesheet" href="css/components/main-input.css">
-    <link rel="stylesheet" href="css/components/main-label.css">
+    <link rel="stylesheet" href="css/components/container-form.css">
     <link rel="stylesheet" href="css/components/main-section.css">
     <link rel="stylesheet" href="css/components/main-title.css">
     <link rel="stylesheet" href="css/components/skill-tec.css">
@@ -71,11 +70,11 @@
                 </div>
             </article>
             <article class="skill-tec">
-                <img src="Assets/Img/ico_react.png" alt="React">
+                <img src="Assets/Img/ico_typescript.png" alt="TypeScript">
 
                 <div class="right">
-                    <h3 class="title">React</h3>
-                    <progress class="progress-bar" value="93" max="100">93%</progress>  
+                    <h3 class="title">TypeScript</h3>
+                    <progress class="progress-bar" value="79" max="100">79%</progress>  
                 </div>
             </article>
             <article class="skill-tec">
@@ -87,11 +86,11 @@
                 </div>
             </article>
             <article class="skill-tec">
-                <img src="Assets/Img/ico_restapi.png" alt="RestAPI">
+                <img src="Assets/Img/ico_nodejs.png" alt="NodeJS">
 
                 <div class="right">
-                    <h3 class="title">Rest API</h3>
-                    <progress class="progress-bar" value="85" max="100">85%</progress>  
+                    <h3 class="title">NodeJS</h3>
+                    <progress class="progress-bar" value="63" max="100">63%</progress>  
                 </div>
             </article>
             <article class="skill-tec">
@@ -99,7 +98,7 @@
 
                 <div class="right">
                     <h3 class="title">JavaScript</h3>
-                    <progress class="progress-bar" value="86" max="100">86%</progress>  
+                    <progress class="progress-bar" value="88" max="100">88%</progress>  
                 </div>
             </article>
             <article class="skill-tec">
@@ -111,19 +110,27 @@
                 </div>
             </article>
             <article class="skill-tec">
-                <img src="Assets/Img/Typescript-icon.png" alt="TypeScript">
+                <img src="Assets/Img/ico_react.png" alt="React">
 
                 <div class="right">
-                    <h3 class="title">TypeScript</h3>
-                    <progress class="progress-bar" value="60" max="100">60%</progress>  
+                    <h3 class="title">React</h3>
+                    <progress class="progress-bar" value="86" max="100">86%</progress>  
                 </div>
             </article>
             <article class="skill-tec">
-                <img src="Assets/Img/ico_nodejs.png" alt="NodeJS">
+                <img src="Assets/Img/ico_restapi.png" alt="RestAPI">
 
                 <div class="right">
-                    <h3 class="title">NodeJS</h3>
-                    <progress class="progress-bar" value="57" max="100">57%</progress>  
+                    <h3 class="title">Rest API</h3>
+                    <progress class="progress-bar" value="85" max="100">85%</progress>  
+                </div>
+            </article>
+            <article class="skill-tec">
+                <img src="Assets/Img/ico_git.png" alt="Git Icon">
+
+                <div class="right">
+                    <h3 class="title">Git</h3>
+                    <progress class="progress-bar" value="94" max="100">94%</progress>  
                 </div>
             </article>
         </div>
@@ -194,26 +201,28 @@
         <form id="contatos" class="main-form">
                 <legend class="main-title -second">Contatos</legend>
 
-                <label class="main-label" for="name">Nome</label>
-                <input class="main-input" id="name" type="text">
-
-                <label class="main-label" for="email">Email</label>
-                <input class="main-input" id="email" type="email">
-
-                <label class="main-label" for="message">Mensagem</label>
-                <textarea class="main-input -textarea" id="message"></textarea>
-
-                <button class="main-button -full" type="submit"> > Enviar mensagem </button>
+                <div class="container-form">
+                    <div class="header-form">
+                        <h1>Email</h1>
+                        <p><strong>borgesg226@gmail.com</strong> ou preencha <br> o formulário de mensagens!</p>
+                        <p class="paragraph-city"> São Paulo, SP | Brasil. </p>
+                    </div>
+                    <div class="contact-form">
+                        <input id="name" type="text" placeholder="Nome*">
+                        <input id="email" type="email" placeholder="E-mail*">
+                        <textarea id="message" placeholder="Mensagem"></textarea>
+                    </div>
+                </div>
+                <button class="main-button -full" type="submit"> Enviar mensagem </button>
         </form>
 
     <footer class="main-footer">
         <a class="action" href="www.linkedin.com/in/guiborgesw" target="blank">
-            <img class="icon-link" src="Assets/Img/linkedin_logo.png" alt="Logo do LinkedIn em pixel art">
+            <img class="icon-link" src="Assets/Img/ico_linkedin.png" alt="Logo do LinkedIn em pixel art">
         </a>
         <a class="action" href="" target="blank">
             <img src="Assets/Img/icon-discord.png" alt="Logo do Discord em pixel art">
         </a>
-        
     </footer>
 
     <script src="JS/components/main-carousel.js"></script>
