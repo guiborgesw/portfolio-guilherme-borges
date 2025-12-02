@@ -23,7 +23,11 @@
 }
 
 .main-button.-full {
-    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: 355px;
+    width: 150px;
+    padding: 13px;
 }
 
 .main-button.-full:hover {
