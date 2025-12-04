@@ -30,6 +30,10 @@ button {
         scroll-behavior: smooth;
     }
 
+    background-image {
+        width: 100%;
+    } 
+
     .body {
         grid-template-columns: 1fr;
     }
@@ -47,10 +51,13 @@ button {
     .container-form {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 
     .main-button.-full {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 }

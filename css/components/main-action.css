@@ -2,11 +2,11 @@
     display: inline-flex;
     align-items: center;
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 1.875rem;
 }
 
 .main-action:hover {
@@ -17,7 +17,7 @@
 .main-action:before {
     content: "";
     background-color:var(--blue-300);
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.625rem;
 }

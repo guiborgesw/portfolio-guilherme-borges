@@ -2,23 +2,23 @@
     display: flex;
     align-items: center;
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 25px;
+    font-size: 1.563rem;
     color: var(--white);
 }
 
 .skill-tec .icon {
-    margin-right: 25px;
-    width: 90px;
+    margin-right: 1.563rem;
+    width: 5.625rem;
 }
 
 .skill-tec .right {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-left: 5px;
+    padding-left: 0.313rem;
 }
 
 .skill-tec .title {
-    margin-bottom: 13px;
-    padding-left: 10px;
+    margin-bottom: 0.813rem;
+    padding-left: 0.625rem;
 }
