@@ -25,6 +25,92 @@ button {
 }
 
 @media (max-width: 768px) {
+
+    /* --------------------- HEADER / NAVBAR --------------------- */
+
+    .main-header nav {
+        display: flex;
+        flex-wrap: wrap;      /* permite quebrar linha */
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .main-header a {
+        font-size: 14px;      /* fontes menores */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* --------------------- HERO (MAIN-BANNER) ---------------------- */
+
+    .main-banner {
+        background-size: cover;
+        background-position: center;
+        padding: 20px 10px;   /* mais respirável no mobile */
+        text-align: center;
+    }
+
+    /* Caixa do título */
+    .main-box {
+        width: 90%;
+        margin: auto;
+        padding: 15px;
+    }
+
+    /* Título responsivo */
+    .main-title {
+        font-size: clamp(22px, 6vw, 32px);
+    }
+
+    .main-subtitle {
+        font-size: clamp(16px, 5vw, 26px);
+    }
+
+    /* --------------------- BOTÕES DO HERO ---------------------- */
+
+    .navigation {
+        display: flex;
+        flex-direction: column; 
+        gap: 15px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .navigation .main-button {
+        width: 80%;
+        max-width: 260px;
+        text-align: center;
+        padding: 12px;
+    }
+        /* EVITA QUALQUER ESTOURO HORIZONTAL NO MOBILE */
+    * {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* GARANTE QUE OS INPUTS NÃO PASSEM DA TELA */
+    input,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    /* IMPEDE QUE O TEXTAREA QUEBRE O LAYOUT */
+    textarea {
+        resize: none;
+    }
+
+    /* BOTÃO 100% RESPONSIVO */
+    .main-button.-full {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+ /* @media (max-width: 768px) {
     html {
         font-size: 87.5%;
         scroll-behavior: smooth;
@@ -60,4 +146,4 @@ button {
         flex-direction: column;
         justify-content: center;
     }
-}
+} */

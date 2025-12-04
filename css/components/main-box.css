@@ -1,8 +1,9 @@
 .main-box {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: var(--gray-500);
     box-shadow: 10px 10px 0px var(--black);
-    text-align: center;
     padding: 2.625rem 2.75rem;
 }
 
