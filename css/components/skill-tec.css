@@ -22,3 +22,9 @@
     margin-bottom: 0.813rem;
     padding-left: 0.625rem;
 }
+
+.skills-img {
+    align-content: center;
+    width: 5.625rem;
+    height: 5.625rem;
+}
