@@ -2,7 +2,7 @@
     background-color: var(--white);
     border: 5px solid var(--black);
     height: 1.875rem;
-    /* width: 100% */
+    width: 100%;
     box-sizing: border-box;
 }
   
