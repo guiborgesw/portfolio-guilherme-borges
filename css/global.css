@@ -25,51 +25,42 @@ button {
 }
 
 @media (max-width: 768px) {
-
-    /* --------------------- HEADER / NAVBAR --------------------- */
-
-    .main-header nav {
-        display: flex;
-        flex-wrap: wrap;      /* permite quebrar linha */
-        justify-content: center;
-        gap: 10px;
-        text-align: center;
+    html {
+        font-size: 87.5%;
+        scroll-behavior: smooth;
     }
 
-    .main-header a {
-        font-size: 14px;      /* fontes menores */
+    img, progress {
+        max-width: 100%;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .body {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header {
+        font-size: 87.5%;
         margin: 0;
-        padding: 0;
     }
 
-    /* --------------------- HERO (MAIN-BANNER) ---------------------- */
-
-    .main-banner {
-        background-size: cover;
-        background-position: center;
-        padding: 20px 10px;   /* mais respirável no mobile */
+    .main-header > nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row; 
         text-align: center;
+        padding-top: 0.7rem;
+        row-gap: 1rem;
     }
 
-    /* Caixa do título */
-    .main-box {
-        width: 90%;
-        margin: auto;
-        padding: 15px;
+    .main-header > img {
+        padding-right: 1.5rem;
     }
 
-    /* Título responsivo */
-    .main-title {
-        font-size: clamp(22px, 6vw, 32px);
-    }
-
-    .main-subtitle {
-        font-size: clamp(16px, 5vw, 26px);
-    }
-
-    /* --------------------- BOTÕES DO HERO ---------------------- */
-
-    .navigation {
+     .navigation {
         display: flex;
         flex-direction: column; 
         gap: 15px;
@@ -82,68 +73,91 @@ button {
         max-width: 260px;
         text-align: center;
         padding: 12px;
-    }
-        /* EVITA QUALQUER ESTOURO HORIZONTAL NO MOBILE */
-    * {
-        box-sizing: border-box;
-        max-width: 100%;
-        overflow-x: hidden;
+    } 
+
+    /* .main-title {
+        font-size: 85%;
     }
 
-    /* GARANTE QUE OS INPUTS NÃO PASSEM DA TELA */
-    input,
-    textarea {
+    .main-subtitle {
+        font-size: 85%;
+    } */
+
+    .main-box {
+        display: flex;
+        justify-content: center;
+        text-align: left;
         width: 100%;
-        max-width: 100%;
-        display: block;
+        margin: auto;
+        margin-right: 100px;
     }
 
-    /* IMPEDE QUE O TEXTAREA QUEBRE O LAYOUT */
+    .main-banner {
+        background-size: cover;
+        background-position: center;
+        padding: 1.25rem 2rem;
+    }
+
+    .skill-tec, .skill-img {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-left: 2rem;
+        overflow-x: visible;
+    }
+
+    .wrapper-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* CONTINUAR DESSA PARTE AMANHÃ */
+
+    .node-card {
+        box-sizing: none;
+        padding-right: 1rem;
+    }
+
+
+    .main-description {
+        text-align: justify;
+        padding-right: 1.5rem !important;
+        font-size: 1rem !important;
+    }
+    
+    .container-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-right: 5rem;
+    }
+
+    .header-form {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5rem;
+        font-size: 1rem !important;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, 
+    textarea {
+        max-width: 100%;
+    }
+
     textarea {
         resize: none;
     }
 
-    /* BOTÃO 100% RESPONSIVO */
-    .main-button.-full {
-        width: 100%;
-        max-width: 100%;
+    .align-button {
+        text-align: left;
+        padding-left: 7.5rem;
     }
-}
-
- /* @media (max-width: 768px) {
-    html {
-        font-size: 87.5%;
-        scroll-behavior: smooth;
-    }
-
-    background-image {
-        width: 100%;
-    } 
-
-    .body {
-        grid-template-columns: 1fr;
-    }
-
-    .main-header {
-        font-size: 87.5%;
-    }
-
-    .wrapper-skill {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container-form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .main-button.-full {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-} */
+} 
