@@ -63,16 +63,16 @@ button {
      .navigation {
         display: flex;
         flex-direction: column; 
-        gap: 15px;
+        gap: 0.938rem;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     .navigation .main-button {
         width: 80%;
-        max-width: 260px;
+        max-width: 16.25rem;
         text-align: center;
-        padding: 12px;
+        padding: 0.75rem;
     } 
 
     /* .main-title {
@@ -89,7 +89,7 @@ button {
         text-align: left;
         width: 100%;
         margin: auto;
-        margin-right: 100px;
+        margin-right: 6.25rem;
     }
 
     .main-banner {
@@ -157,7 +157,6 @@ button {
     }
 
     .align-button {
-        text-align: left;
         padding-left: 7.5rem;
     }
 } 
