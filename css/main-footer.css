@@ -1,0 +1,18 @@
+.main-footer {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--black);
+    padding-top: 1.25rem;
+    padding-bottom: 0.938rem;
+}
+
+.main-footer .action {
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+}
+
+.main-footer .icon-link {
+    width: 2.813rem;
+    height: 2.938rem;
+}

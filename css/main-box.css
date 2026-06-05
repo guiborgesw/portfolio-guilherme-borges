@@ -1,0 +1,12 @@
+.main-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--gray-500);
+    box-shadow: 10px 10px 0px var(--black);
+    padding: 2.625rem 2.75rem;
+}
+
+.main-box .main-title {
+    margin-bottom: 1.25rem;
+}
