@@ -2,6 +2,7 @@ import { Banner } from './components/Banner'
 import { Navbar } from './components/Navbar'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
+import { About } from './components/About'
 
 export function App() {
   return (
@@ -10,6 +11,7 @@ export function App() {
       <Banner />
       <Skills />
       <Projects />
+      <About />
     </>
   )
 }
