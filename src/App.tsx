@@ -1,8 +1,10 @@
-import { Banner } from './components/Banner'
-import { Navbar } from './components/Navbar'
-import { Projects } from './components/Projects'
-import { Skills } from './components/Skills'
-import { About } from './components/About'
+import { Navbar }    from './components/Navbar'
+import { Banner }    from './components/Banner'
+import { Skills }    from './components/Skills'
+import { Projects }  from './components/Projects'
+import { About }     from './components/About'
+import { Contacts }  from './components/Contacts'
+import { Footer }    from './components/Footer'
 
 export function App() {
   return (
@@ -12,6 +14,8 @@ export function App() {
       <Skills />
       <Projects />
       <About />
+      <Contacts />
+      <Footer />
     </>
   )
 }
