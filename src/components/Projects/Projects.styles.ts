@@ -1,101 +1,139 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  background-color: ${({ theme }) => theme.colors.black};
-  padding-top: 3.125rem;
-  padding-bottom: 6.25rem;
-  border-bottom: 10px solid ${({ theme }) => theme.colors.blue300};
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: ${props => props.theme['black']};
 `
 
 export const Title = styled.h2`
   font-family: 'Press Start 2P', sans-serif;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
   text-align: center;
-  margin-bottom: 3.75rem;
+  padding: 55px 0 70px;
+  letter-spacing: 2px;
 `
 
 export const WrapperCard = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 32px;
 `
 
 export const Card = styled.article`
-  background-color: ${({ theme }) => theme.colors.blue500};
-  width: 17.5rem;
-  box-shadow: 10px 10px 0px ${({ theme }) => theme.colors.white};
-  display: flex;
-  flex-direction: column;
+  width: 430px;
+  background: #111;
+  border: 3px solid ${props => props.theme['white']};
+  position: relative;
+  box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.15);
+  transition: transform 0.15s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    right: -9px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+  }
 `
 
-export const CardThumb = styled.div`
+export const CardThumb = styled.div<{ $bg?: string }>`
+  width: 100%;
+  height: 200px;
+  background: ${({ $bg }) => $bg ?? '#111'};
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 17.5rem;
+  justify-content: center;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    image-rendering: pixelated;
   }
 `
 
 export const CardInfo = styled.div`
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  padding: 18px 18px 20px;
 `
 
 export const CardTitle = styled.h3`
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 0.75rem;
-  color: ${({ theme }) => theme.colors.white};
+  font-size: 0.825rem;
+  color: ${props => props.theme['white']};
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
 `
 
 export const CardDescription = styled.p`
-  font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: 0.75rem;
-  color: ${({ theme }) => theme.colors.white};
-  line-height: 1.8;
-  opacity: 0.85;
+  font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: ${props => props.theme['gray-300']};
+  line-height: 1.3;
+  padding-top: 10px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 `
 
 export const StackList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  padding-top: 6px;
+  margin-bottom: 18px;
+  gap: 10px;
 `
 
 export const StackTag = styled.span`
-  font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: 0.5rem;
-  color: ${({ theme }) => theme.colors.white};
-  border: 2px solid ${({ theme }) => theme.colors.blue300};
-  padding: 0.25rem 0.5rem;
+  font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  font-size: 0.825rem;
+  padding: 5px 8px;
+  border: 2px solid ${props => props.theme['blue-300']};
+  color: ${props => props.theme['blue-300']};
+  background: transparent;
+  letter-spacing: 0.5px;
 `
 
 export const CardButtons = styled.div`
   display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
+  padding-top: 10px;
+  gap: 10px;
 `
 
-export const Button = styled.a`
-  font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: 0.5rem;
-  padding: 0.625rem 0.875rem;
-  text-decoration: none;
+export const Button = styled.a<{ $variant?: 'demo' | 'github' }>`
+  font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  font-size: 0.825rem;
+  padding: 8px 12px;
+  border: 2px solid;
   cursor: pointer;
-  transition: transform 100ms linear;
-  background-color: ${({ theme }) => theme.colors.blue300};
-  color: ${({ theme }) => theme.colors.white};
-  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.829);
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+  text-decoration: none;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.blue900};
-    transform: scale(1.05);
-  }
+  ${({ $variant, theme }) =>
+  $variant === 'github'
+    ? `
+  border-color: ${theme['gray-500']};
+  color: ${theme['gray-100']};
+  background: transparent;
+  &:hover { border-color: #aaa; color: white; }
+`
+    : `
+  border-color: ${theme['blue-300']};
+  background: ${theme['blue-300']};
+  color: white;
+  &:hover { background: ${theme['blue-400']}; }
+`}
 `

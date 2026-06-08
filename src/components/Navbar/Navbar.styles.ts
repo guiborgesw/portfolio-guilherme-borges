@@ -4,17 +4,17 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.blue900};
-  border-bottom: 10px solid ${({ theme }) => theme.colors.black};
-  padding: 0.625rem 1.25rem;
+  background-color: ${props => props.theme['blue-900']};
+  border-bottom: 10px solid ${props => props.theme['black']};
+  padding: 1.25rem 1.25rem;
   position: sticky;
   top: 0;
   z-index: 100;
 `
 
 export const Logo = styled.img`
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
 `
 
 export const Nav = styled.nav`
@@ -25,16 +25,15 @@ export const Nav = styled.nav`
 export const NavLink = styled.a`
   display: inline-flex;
   align-items: center;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
   font-size: 1.25rem;
-  font-family: ${({ theme }) => theme.fonts.primary};
   font-weight: 500;
   text-decoration: none;
   margin-right: 1.875rem;
 
   &::before {
     content: '';
-    background-color: ${({ theme }) => theme.colors.blue300};
+    background-color: ${props => props.theme['blue-300']};
     width: 0.625rem;
     height: 0.625rem;
     margin-right: 0.625rem;
@@ -42,7 +41,7 @@ export const NavLink = styled.a`
   }
 
   &:hover {
-    color: ${({ theme }) => theme.colors.blue300};
+    color: ${props => props.theme['blue-300']};
     transform: scale(1.08);
   }
 `
@@ -50,15 +49,14 @@ export const NavLink = styled.a`
 export const CvButton = styled.a`
   display: inline-flex;
   align-items: center;
-  font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
-  background: ${({ theme }) => theme.colors.blue300};
-  color: ${({ theme }) => theme.colors.white};
-  padding: 0.5rem 1rem;
+  background: ${props => props.theme['blue-300']};
+  color: ${props => props.theme['white']};
+  padding: 1.125rem 1.25rem;
   text-decoration: none;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.blue500};
+    background: ${props => props.theme['blue-500']};
   }
 `

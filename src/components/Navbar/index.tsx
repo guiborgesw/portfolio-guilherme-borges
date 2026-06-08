@@ -7,9 +7,10 @@ export function Navbar() {
     <S.Header>
       <S.Logo src={favicon} alt="Logo Guilherme Borges" />
       <S.Nav>
+        <S.NavLink href="#">Home</S.NavLink>
+        <S.NavLink href="#projetos">Projetos</S.NavLink>
         <S.NavLink href="#sobre">Sobre</S.NavLink>
         <S.NavLink href="#contatos">Contatos</S.NavLink>
-        <S.NavLink href="#projetos">Projetos</S.NavLink>
         <S.CvButton
           href="/src/assets/img/Guilherme-Borges-CV.pdf"
           download="Guilherme-Borges-CV.pdf"

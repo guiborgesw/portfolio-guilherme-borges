@@ -7,7 +7,7 @@ export const Section = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   height: 52rem;
-  border-bottom: 10px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 10px solid ${props => props.theme['black']};
   padding-top: 7.188rem;
   padding-left: 5.625rem;
 `
@@ -26,7 +26,7 @@ export const Box = styled.div`
 export const Title = styled.h1`
   font-family: 'Press Start 2P', sans-serif;
   font-size: 1.875rem;
-  color: ${({ theme }) => theme.colors.blue300};
+  color: ${props => props.theme['blue-300']};
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.719);
   margin-bottom: 0.5rem;
 `
@@ -35,7 +35,7 @@ export const Subtitle = styled.h2`
   font-family: 'Press Start 2P', sans-serif;
   font-size: 1.563rem;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.815);
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
 `
 
 export const Navigation = styled.div`
@@ -45,18 +45,27 @@ export const Navigation = styled.div`
 
 export const Button = styled.a`
   display: inline-block;
-  background-color: ${({ theme }) => theme.colors.blue300};
-  color: ${({ theme }) => theme.colors.white};
+  background-color: ${props => props.theme['blue-300']};
+  color: ${props => props.theme['white']};
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.829);
   padding: 1.125rem 1.25rem;
   text-decoration: none;
   cursor: pointer;
   transition: transform 100ms linear;
-  font-family: ${({ theme }) => theme.fonts.primary};
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.blue900};
-    box-shadow: 0 5px ${({ theme }) => theme.colors.gray300};
+    background-color: ${props => props.theme['blue-900']};
+    box-shadow: 0 5px ${props => props.theme['gray-300']};
     transform: scale(1.08);
   }
+`
+
+export const ContainerBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: ${props => props.theme['gray-500']};
+  box-shadow: 10px 10px 0px ${props => props.theme['black']};
+  padding: 2.625rem 2.75rem;
+  margin-bottom: 2.5rem;
 `

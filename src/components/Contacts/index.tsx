@@ -16,9 +16,9 @@ export function Contacts() {
         </S.HeaderForm>
 
         <S.ContactForm>
-          <input id="name"    type="text"  placeholder="Nome*"     />
-          <input id="email"   type="email" placeholder="E-mail*"   />
-          <textarea id="message"           placeholder="Mensagem"  />
+          <input id="name" type="text" placeholder="Nome*" />
+          <input id="email" type="email" placeholder="E-mail*" />
+          <textarea id="message" placeholder="Mensagem" />
         </S.ContactForm>
       </S.ContainerForm>
 

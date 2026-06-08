@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  background-color: ${({ theme }) => theme.colors.blue700};
+  background-color: ${props => props.theme['blue-700']};
   padding-top: 3.125rem;
   padding-bottom: 6.25rem;
-  border-bottom: 10px solid ${({ theme }) => theme.colors.black};
+  border-bottom: 10px solid ${props => props.theme['black']};
 `
 
 export const Title = styled.h2`
   font-family: 'Press Start 2P', sans-serif;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
   text-align: center;
   margin-bottom: 3.75rem;
 `
@@ -29,7 +29,7 @@ export const Carousel = styled.div`
     display: block;
     height: 0.375rem;
     width: calc(100% - 100px);
-    background-color: ${({ theme }) => theme.colors.black};
+    background-color: ${props => props.theme['black']};
   }
 
   &::before {
@@ -39,7 +39,7 @@ export const Carousel = styled.div`
     left: 0;
     top: 2.375rem;
     display: block;
-    border: 3px dashed ${({ theme }) => theme.colors.black};
+    border: 3px dashed ${props => props.theme['black']};
     width: 100%;
   }
 `
@@ -69,7 +69,7 @@ export const NodeCard = styled.figure`
     position: absolute;
     box-sizing: border-box;
     width: 2.5rem;
-    border: 2.5px dashed ${({ theme }) => theme.colors.black};
+    border: 2.5px dashed ${props => props.theme['black']};
     transform: rotate(90deg) translateX(-62%);
     bottom: 8.75rem;
   }
@@ -79,7 +79,7 @@ export const NodeYear = styled.figcaption`
   font-family: 'Press Start 2P', sans-serif;
   font-size: 1.563rem;
   font-weight: 400;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
   margin-bottom: 3.125rem;
 `
 
@@ -87,14 +87,14 @@ export const NodeLogo = styled.div`
   display: flex;
   align-items: center;
   height: 8.75rem;
-  border: 5px solid ${({ theme }) => theme.colors.black};
+  border: 5px solid ${props => props.theme['black']};
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${props => props.theme['white']};
 
   img {
+    width: 11.25rem;
     max-height: 100%;
-    max-width: 9rem;
     object-fit: contain;
   }
 `
@@ -102,8 +102,8 @@ export const NodeLogo = styled.div`
 export const ButtonArrow = styled.button<{ $direction: 'left' | 'right' }>`
   width: 3.125rem;
   height: 3.125rem;
-  background-color: ${({ theme }) => theme.colors.blue300};
-  box-shadow: 5px 5px 0px ${({ theme }) => theme.colors.black};
+  background-color: ${props => props.theme['blue-300']};
+  box-shadow: 5px 5px 0px ${props => props.theme['black']};
   cursor: pointer;
   border: none;
   position: absolute;
@@ -118,7 +118,7 @@ export const ButtonArrow = styled.button<{ $direction: 'left' | 'right' }>`
     width: 0.938rem;
     height: 0.938rem;
     border: 15px solid transparent;
-    border-left: 28px solid ${({ theme }) => theme.colors.white};
+    border-left: 28px solid ${props => props.theme['white']};
     transform: ${({ $direction }) =>
       $direction === 'left'
         ? 'rotate(180deg) translateX(12px)'
@@ -127,7 +127,7 @@ export const ButtonArrow = styled.button<{ $direction: 'left' | 'right' }>`
 `
 
 export const Description = styled.p`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
   font-size: 1.438rem;
   font-weight: 300;
   line-height: 1.3;

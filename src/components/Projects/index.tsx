@@ -8,7 +8,7 @@ export function Projects() {
       <S.WrapperCard>
         {projects.map((project) => (
           <S.Card key={project.name}>
-            <S.CardThumb>
+            <S.CardThumb $bg={project.thumbBg}>
               <img src={project.image} alt={project.alt} />
             </S.CardThumb>
             <S.CardInfo>
@@ -20,8 +20,8 @@ export function Projects() {
                 ))}
               </S.StackList>
               <S.CardButtons>
-                <S.Button href={project.demoUrl} target="_blank">▶ Demo</S.Button>
-                <S.Button href={project.githubUrl} target="_blank">GitHub</S.Button>
+                <S.Button href={project.demoUrl} target="_blank" $variant="demo">▶ Demo</S.Button>
+                <S.Button href={project.githubUrl} target="_blank" $variant="github">GitHub</S.Button>
               </S.CardButtons>
             </S.CardInfo>
           </S.Card>

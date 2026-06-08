@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  padding: 3rem 0;
+  background-color: ${props => props.theme['blue-500']};
+  padding-top: 3rem;
+  padding-bottom: 60px;
 `
 
 export const Title = styled.h2`
   font-family: 'Press Start 2P', sans-serif;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
   text-align: center;
   margin-bottom: 2.5rem;
 `
@@ -24,7 +26,7 @@ export const SkillItem = styled.article`
   align-items: center;
   font-family: 'Press Start 2P', sans-serif;
   font-size: 1.563rem;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${props => props.theme['white']};
   width: 26.875rem;
   margin-bottom: 2.5rem;
 
@@ -54,27 +56,28 @@ export const SkillRight = styled.div`
 `
 
 export const SkillTitle = styled.h3`
+  font-family: 'Press Start 2P', sans-serif;
   margin-bottom: 0.813rem;
   padding-left: 0.625rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
 `
 
 export const ProgressBar = styled.progress`
-  background-color: ${({ theme }) => theme.colors.white};
-  border: 5px solid ${({ theme }) => theme.colors.black};
+  background-color: ${props => props.theme['white']};
+  border: 5px solid ${props => props.theme['black']};
   height: 1.875rem;
   width: 20rem;
   box-sizing: border-box;
 
   &::-webkit-progress-bar {
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${props => props.theme['white']};
   }
 
   &::-webkit-progress-value {
-    background-color: ${({ theme }) => theme.colors.blue700};
+    background-color: ${props => props.theme['blue-700']};
   }
 
   &::-moz-progress-bar {
-    background-color: ${({ theme }) => theme.colors.blue700};
+    background-color: ${props => props.theme['blue-700']};
   }
 `

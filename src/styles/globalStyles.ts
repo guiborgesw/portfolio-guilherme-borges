@@ -1,13 +1,23 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
+  html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: ${({ theme }) => theme.fonts.primary};
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
   }
 
   body, h1, h2, h3, figure {
     margin: 0;
     padding: 0;
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+  }
+
+  section {
+    min-height: calc(100vh - 80px);
   }
 
   button {

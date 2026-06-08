@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const FooterWrapper = styled.footer`
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${props => props.theme['black']};
   padding-top: 1.25rem;
   padding-bottom: 0.938rem;
 `

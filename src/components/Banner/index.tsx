@@ -4,10 +4,10 @@ export function Banner() {
   return (
     <S.Section>
       <S.Wrapper>
-        <S.Box>
+        <S.ContainerBox>
           <S.Title>Guilherme Borges</S.Title>
           <S.Subtitle>Software Developer</S.Subtitle>
-        </S.Box>
+        </S.ContainerBox>
         <S.Navigation>
           <S.Button
             href="/src/assets/img/Guilherme-Borges-CV.pdf"
