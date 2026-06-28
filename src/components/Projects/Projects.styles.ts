@@ -4,6 +4,8 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-items: center;
+  align-items: center;
+  min-height: 100vh;
   background-color: ${props => props.theme['black']};
 `
 

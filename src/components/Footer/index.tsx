@@ -1,4 +1,4 @@
-import linkedinIcon from '../../assets/img/ico_linkedin.png'
+import linkedinIcon from '../../assets/ico_linkedin.png'
 import * as S from './Footer.styles'
 
 export function Footer() {

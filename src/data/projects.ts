@@ -12,7 +12,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'Café Chilling',
-    image: '/src/assets/img/Café chilling.png',
+    image: '/src/assets/Café chilling.png',
     alt: 'Logo Café Chilling',
     description: 'Aplicação de gestão de projetos com interface intuitiva e foco em produtividade.',
     stack: ['React', 'TypeScript', 'Node.js'],
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Duck Chest',
-    image: '/src/assets/img/Duck Chest.png',
+    image: '/src/assets/Duck Chest.png',
     alt: 'Logo Duck Chest',
     description: 'Plataforma desenvolvida com foco em experiência do usuário e boas práticas de código.',
     stack: ['React', 'TypeScript', 'REST API'],

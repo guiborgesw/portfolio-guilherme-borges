@@ -1,4 +1,4 @@
-import favicon from '../../assets/img/favicon.ico'
+import favicon from '../../assets/favicon.ico'
 
 import * as S from './Navbar.styles'
 
