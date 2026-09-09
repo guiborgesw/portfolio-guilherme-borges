@@ -1,23 +1,22 @@
 import favicon from '../../assets/favicon.ico'
-
-import * as S from './Navbar.styles'
+import { CvButton, Header, Logo, Nav, NavLink } from './Navbar.styles'
 
 export function Navbar() {
   return (
-    <S.Header>
-      <S.Logo src={favicon} alt="Logo Guilherme Borges" />
-      <S.Nav>
-        <S.NavLink href="#">Home</S.NavLink>
-        <S.NavLink href="#projetos">Projetos</S.NavLink>
-        <S.NavLink href="#sobre">Sobre</S.NavLink>
-        <S.NavLink href="#contatos">Contatos</S.NavLink>
-        <S.CvButton
+    <Header>
+      <Logo src={favicon} alt="Logo Guilherme Borges" />
+      <Nav>
+        <NavLink href="#">Home</NavLink>
+        <NavLink href="#sobre">Sobre</NavLink>
+        <NavLink href="#projetos">Projetos</NavLink>
+        <NavLink href="#contatos">Contatos</NavLink>
+        <CvButton
           href="/src/assets/img/Guilherme-Borges-CV.pdf"
           download="Guilherme-Borges-CV.pdf"
         >
           Download CV
-        </S.CvButton>
-      </S.Nav>
-    </S.Header>
+        </CvButton>
+      </Nav>
+    </Header>
   )
 }
