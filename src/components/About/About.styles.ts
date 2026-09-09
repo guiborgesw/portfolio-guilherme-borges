@@ -120,6 +120,7 @@ export const NodeLogo = styled.div`
   align-items: center;
   justify-content: center;
   aspect-ratio: 16 / 9;
+  overflow: hidden;
   transition: border-color 0.3s ease;
 
   &:hover {
