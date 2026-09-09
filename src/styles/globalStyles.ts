@@ -24,7 +24,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Fira Code", Arial, Helvetica, sans-serif;
   }
 
-  /* ===== Fundo de estrelas compartilhado (fixo, atrás de todas as seções) ===== */
   body::before {
     content: '';
     position: fixed;
