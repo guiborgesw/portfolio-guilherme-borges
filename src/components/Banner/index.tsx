@@ -20,23 +20,35 @@ import {
   Carousel,
   CarouselScroll
 } from './Banner.styles'
+import {
+  SiReact,
+  SiTypescript,
+  SiNodedotjs,
+  SiSwagger,
+  SiGit,
+  SiFigma,
+  SiHtml5,
+  SiCss,
+} from 'react-icons/si'
+import type { IconType } from 'react-icons'
 
 export type PipelineStep = {
   name: string
-  icon: string
+  icon: IconType
+  color: string
 }
 
 export function Banner() {
 
   const Pipeline: PipelineStep[] = [
-    { name: 'React', icon: '/src/assets/ico_react.png' },
-    { name: 'TypeScript', icon: '/src/assets/ico_typescript.png' },
-    { name: 'NodeJS',     icon: '/src/assets/ico_nodejs.png' },
-    { name: 'Rest API',   icon: '/src/assets/ico_restapi.png' },
-    { name: 'Git',        icon: '/src/assets/ico_git.png' },
-    { name: 'UX',         icon: '/src/assets/ico_ux.png' },
-    { name: 'HTML',       icon: '/src/assets/ico_html5.png' },
-    { name: 'CSS',        icon: '/src/assets/ico_css3.png' },
+    { name: 'React',      icon: SiReact,      color: '#61DAFB' },
+    { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+    { name: 'NodeJS',     icon: SiNodedotjs,  color: '#5FA04E' },
+    { name: 'Rest API',   icon: SiSwagger,    color: '#85EA2D' },
+    { name: 'Git',        icon: SiGit,        color: '#F05032' },
+    { name: 'UX',         icon: SiFigma,      color: '#F24E1E' },
+    { name: 'HTML',       icon: SiHtml5,      color: '#E34F26' },
+    { name: 'CSS',        icon: SiCss,        color: '#663399' },
   ]
 
   return (
@@ -73,12 +85,16 @@ export function Banner() {
             <CarouselScroll>
               {Pipeline.map((stack) => {
                 return (
-                  <li><img src={stack.icon} alt={stack.name} /></li>
+                  <li key={stack.name}>
+                    <stack.icon size={32} color={stack.color} />
+                  </li>
                 )
               })}
               {Pipeline.map((stack) => {
                 return (
-                  <li><img src={stack.icon} alt={stack.name} /></li>
+                  <li key={stack.name}>
+                    <stack.icon size={32} color={stack.color} />
+                  </li>
                 )
               })}
             </CarouselScroll>

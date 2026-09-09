@@ -264,6 +264,12 @@ export const CarouselScroll = styled.ul`
   gap: var(--gap);
   padding: 0;
 
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   animation: ${scroll} 20s linear infinite;
 
   &:hover {
