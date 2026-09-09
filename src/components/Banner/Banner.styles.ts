@@ -252,6 +252,7 @@ export const Carousel = styled.div`
   padding-block: 0.5rem;
   overflow: hidden;
   user-select: none;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
   --gap: 2rem;
 `
 
@@ -263,12 +264,6 @@ export const CarouselScroll = styled.ul`
   width: max-content;
   gap: var(--gap);
   padding: 0;
-
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   animation: ${scroll} 20s linear infinite;
 
