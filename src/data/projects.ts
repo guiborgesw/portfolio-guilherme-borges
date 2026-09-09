@@ -1,3 +1,6 @@
+import previewSparta from '../assets/preview-sparta.png'
+import previewTimer from '../assets/preview-timer.png'
+
 export type Project = {
   name: string
   image: string
@@ -12,7 +15,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'Sparta',
-    image: '/src/assets/preview-sparta.png',
+    image: previewSparta,
     alt: 'Logo Projeto Sparta',
     description: 'Aplicação de gestão de hábitos com interface intuitiva e foco em produtividade e desenvolvimento pessoal.',
     stack: ['React', 'JavaScript', 'CSS Modules'],
@@ -22,7 +25,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Ignite Timer',
-    image: '/src/assets/preview-timer.png',
+    image: previewTimer,
     alt: 'Logo Projeto Ignite Timer',
     description: 'Aplicação de cronômetro inteligente com interface intuitiva e foco em gestão do tempo, foco e produtividade pessoal.',
     stack: ['React', 'TypeScript', 'Styled Components'],
