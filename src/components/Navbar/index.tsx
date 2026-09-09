@@ -1,4 +1,5 @@
 import favicon from '../../assets/favicon.ico'
+import cvPdf from '../../assets/Guilherme-Borges-CV.pdf'
 import { CvButton, Header, Logo, Nav, NavLink } from './Navbar.styles'
 
 export function Navbar() {
@@ -11,7 +12,7 @@ export function Navbar() {
         <NavLink href="#projetos">Projetos</NavLink>
         <NavLink href="#contatos">Contatos</NavLink>
         <CvButton
-          href="/src/assets/img/Guilherme-Borges-CV.pdf"
+          href={cvPdf}
           download="Guilherme-Borges-CV.pdf"
         >
           Download CV
