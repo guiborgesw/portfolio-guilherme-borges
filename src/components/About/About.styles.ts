@@ -1,135 +1,159 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  background-color: ${props => props.theme['blue-700']};
-  padding-top: 3.125rem;
-  padding-bottom: 6.25rem;
-  border-bottom: 10px solid ${props => props.theme['black']};
-`
-
-export const Title = styled.h2`
-  font-family: 'Press Start 2P', sans-serif;
-  color: ${props => props.theme['white']};
-  text-align: center;
-  margin-bottom: 3.75rem;
-`
-
-export const Carousel = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  padding-left: 5.313rem;
-  padding-right: 5.313rem;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5rem 5.625rem;
 
   &::after {
     content: '';
     position: absolute;
-    left: 3.125rem;
-    top: 2.375rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(91, 140, 255, 0.2) 20%,
+      rgba(91, 140, 255, 0.2) 80%,
+      transparent
+    );
+  }
+`
+
+export const Title = styled.h2`
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: ${props => props.theme['white']};
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 4rem;
+
+  &::before,
+  &::after {
+    content: '';
     display: block;
-    height: 0.375rem;
-    width: calc(100% - 100px);
-    background-color: ${props => props.theme['black']};
+    height: 2px;
+    width: 48px;
+    flex-shrink: 0;
   }
 
   &::before {
-    content: '';
-    position: absolute;
-    box-sizing: border-box;
-    left: 0;
-    top: 2.375rem;
-    display: block;
-    border: 3px dashed ${props => props.theme['black']};
-    width: 100%;
+    background: linear-gradient(to right, transparent, ${props => props.theme['blue-300']});
+  }
+
+  &::after {
+    background: linear-gradient(to left, transparent, ${props => props.theme['blue-300']});
   }
 `
 
-export const Items = styled.div`
+export const TimelineWrapper = styled.div`
   width: 100%;
-  overflow: hidden;
+  max-width: 1100px;
+  margin-bottom: 3.75rem;
+  position: relative;
 `
 
-export const Elements = styled.div<{ $offset: number }>`
-  display: flex;
-  justify-content: space-evenly;
-  transition: transform 100ms ease-in-out;
-  transform: translateX(${({ $offset }) => $offset}px);
+export const TimelineLine = styled.div`
+  position: absolute;
+  top: 37px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(91, 140, 255, 0.5) 10%,
+    rgba(91, 140, 255, 0.5) 90%,
+    transparent
+  );
+`
+
+export const TimelineItems = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 `
 
 export const NodeCard = styled.figure`
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  flex-shrink: 0;
-  width: 25%;
+  gap: 12px;
 
+  /* ponto da linha do tempo (entre o ano e o card) */
   &::before {
     content: '';
-    position: absolute;
-    box-sizing: border-box;
-    width: 2.5rem;
-    border: 2.5px dashed ${props => props.theme['black']};
-    transform: rotate(90deg) translateX(-62%);
-    bottom: 8.75rem;
+    order: 2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: ${props => props.theme['blue-300']};
+    box-shadow: 0 0 10px rgba(70, 128, 219, 0.8);
+    flex-shrink: 0;
   }
 `
 
 export const NodeYear = styled.figcaption`
-  font-family: 'Press Start 2P', sans-serif;
-  font-size: 1.563rem;
-  font-weight: 400;
-  color: ${props => props.theme['white']};
-  margin-bottom: 3.125rem;
+  order: 1;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: ${props => props.theme['blue-200']};
+  letter-spacing: 0.05em;
 `
 
 export const NodeLogo = styled.div`
+  order: 3;
+  background: rgba(10, 15, 28, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  width: 90%;
   display: flex;
   align-items: center;
-  height: 8.75rem;
-  border: 5px solid ${props => props.theme['black']};
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  background-color: ${props => props.theme['white']};
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: rgba(70, 128, 219, 0.6);
+  }
 
   img {
-    width: 11.25rem;
+    max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    filter: brightness(0.9);
   }
 `
 
-export const ButtonArrow = styled.button<{ $direction: 'left' | 'right' }>`
-  width: 3.125rem;
-  height: 3.125rem;
-  background-color: ${props => props.theme['blue-300']};
-  box-shadow: 5px 5px 0px ${props => props.theme['black']};
-  cursor: pointer;
-  border: none;
-  position: absolute;
-  bottom: 4.375rem;
-  transform: translateY(50%);
-  ${({ $direction }) => $direction === 'left' ? 'left: 0.938rem;' : 'right: 0.938rem;'}
+export const Description = styled.div`
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`
 
-  &::before {
-    content: '';
-    display: block;
-    box-sizing: border-box;
-    width: 0.938rem;
-    height: 0.938rem;
-    border: 15px solid transparent;
-    border-left: 28px solid ${props => props.theme['white']};
-    transform: ${({ $direction }) =>
-      $direction === 'left'
-        ? 'rotate(180deg) translateX(12px)'
-        : 'translateX(5px)'};
+export const Paragraph = styled.p`
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: ${props => props.theme['gray-200']};
+
+  strong {
+    font-family: 'Fira Code', monospace;
+    color: #c7cbd8;
+    font-weight: 600;
   }
 `
 
-export const Description = styled.p`
-  color: ${props => props.theme['white']};
-  font-size: 1.438rem;
-  font-weight: 300;
-  line-height: 1.3;
-  padding: 3.125rem 3.125rem 0;
+export const Highlight = styled.span`
+  color: ${props => props.theme['blue-200']};
 `
