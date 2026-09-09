@@ -1,59 +1,54 @@
-import { useState } from 'react'
 import { timeline } from '../../data/timeline'
-import * as S from './About.styles'
+import { 
+  Section, 
+  Title, 
+  TimelineWrapper, 
+  TimelineLine, 
+  TimelineItems, 
+  NodeCard, 
+  NodeYear, 
+  NodeLogo, 
+  Description,
+  Paragraph, 
+  Highlight,
+ } from './About.styles'
 
 export function About() {
-  const [pixels, setPixels] = useState(0)
-
-  function handlePrev() {
-    setPixels((prev) => prev + 50)
-  }
-
-  function handleNext() {
-    setPixels((prev) => prev - 50)
-  }
-
   return (
-    <S.Section id="sobre">
-      <S.Title>Sobre</S.Title>
+    <Section id="sobre">
+      <Title>Sobre</Title>
 
-      <S.Carousel>
-        <S.ButtonArrow $direction="left" onClick={handlePrev}>
-          <span style={{ display: 'none' }}>Voltar</span>
-        </S.ButtonArrow>
+      <TimelineWrapper>
+        <TimelineLine />
+        <TimelineItems>
+          {timeline.map((item) => (
+            <NodeCard key={item.alt}>
+              <NodeYear>{item.year}</NodeYear>
+              <NodeLogo>
+                <img src={item.logo} alt={item.alt} />
+              </NodeLogo>
+            </NodeCard>
+          ))}
+        </TimelineItems>
+      </TimelineWrapper>
 
-        <S.Items>
-          <S.Elements $offset={pixels}>
-            {timeline.map((item) => (
-              <S.NodeCard key={item.alt}>
-                <S.NodeYear>{item.year}</S.NodeYear>
-                <S.NodeLogo>
-                  <img src={item.logo} alt={item.alt} />
-                </S.NodeLogo>
-              </S.NodeCard>
-            ))}
-          </S.Elements>
-        </S.Items>
-
-        <S.ButtonArrow $direction="right" onClick={handleNext}>
-          <span style={{ display: 'none' }}>Avançar</span>
-        </S.ButtonArrow>
-      </S.Carousel>
-
-      <S.Description>
-        Sou <strong>Guilherme Borges</strong>, <strong>Software Developer</strong> com{' '}
-        <strong>experiência prática em JavaScript, TypeScript, React.js e Node.js</strong>,
-        atuando no desenvolvimento de aplicações modernas, performáticas e bem estruturadas.
-        Tenho também <strong>experiência com REST APIs, Azure DevOps e Docker</strong>, além
-        de conhecimentos em <strong>UX/UI Design</strong>, criando interfaces intuitivas,
-        acessíveis e centradas na experiência do usuário.
-        <br /><br />
-        Ao longo da minha trajetória, participei de projetos reais aplicando lógica de
-        programação, integração com APIs, desenvolvimento responsivo e boas práticas de
-        versionamento com Git e GitHub. Busco constantemente aprimorar minhas{' '}
-        <strong>hard skills e soft skills</strong>, com foco em resolução de problemas,
-        trabalho em equipe e entrega de resultados de alto impacto.
-      </S.Description>
-    </S.Section>
+      <Description>
+        <Paragraph>
+          Sou <strong>Guilherme Borges, Software Developer</strong> com experiência prática em{' '}
+          <Highlight>JavaScript, TypeScript, React.js e Node.js</Highlight>, atuando no
+          desenvolvimento de aplicações modernas, performáticas e bem estruturadas. Tenho também
+          experiência com <Highlight>REST APIs, Azure DevOps e Docker</Highlight>, além de
+          conhecimentos em UX/UI Design, criando interfaces intuitivas, acessíveis e centradas na
+          experiência do usuário.
+        </Paragraph>
+        <Paragraph>
+          Ao longo da minha trajetória, participei de projetos reais aplicando lógica de
+          programação, integração com APIs, desenvolvimento responsivo e boas práticas de
+          versionamento com Git e GitHub. Busco constantemente aprimorar minhas{' '}
+          <strong>hard skills e soft skills</strong>, com foco em resolução de problemas, trabalho
+          em equipe e entrega de resultados de alto impacto.
+        </Paragraph>
+      </Description>
+    </Section>
   )
 }
