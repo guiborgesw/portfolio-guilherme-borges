@@ -1,5 +1,5 @@
 import logoLuft from '../assets/Logo-LuftLogistics.png'
-import logoCamp from '../assets/Logo-Camp.png'
+import logoCamp from '../assets/LOGO-CAMP.png'
 import logoGRSA from '../assets/Logo-GRSA.png'
 import logoGPS from '../assets/Logo-GrupoGPS.png'
 
