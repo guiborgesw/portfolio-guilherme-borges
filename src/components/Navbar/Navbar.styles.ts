@@ -15,6 +15,8 @@ export const Header = styled.header`
   top: 20px;
   margin: 0 auto;
   z-index: 100;
+  /* layer próprio: o blur do backdrop-filter deixa de forçar repaint da página inteira no scroll */
+  transform: translateZ(0);
 `
 
 export const Logo = styled.img`
