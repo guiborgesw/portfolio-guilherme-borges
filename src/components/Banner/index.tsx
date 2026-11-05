@@ -1,5 +1,6 @@
 import { Navbar } from '../Navbar'
 import cvPdf from '../../assets/Guilherme-Borges-CV.pdf'
+import { CV_FILENAME, handleCvDownload } from '../../utils/cvDownload'
 import { 
   Section, 
   StarsFar, 
@@ -102,7 +103,7 @@ export function Banner() {
 
           <Actions>
             <PrimaryButton href="#projetos">Ver Projetos</PrimaryButton>
-            <GhostButton href={cvPdf} download="Guilherme-Borges-CV.pdf">
+            <GhostButton href={cvPdf} download={CV_FILENAME} onClick={handleCvDownload}>
               Download CV
             </GhostButton>
           </Actions>
