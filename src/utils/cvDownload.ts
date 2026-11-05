@@ -6,10 +6,7 @@ export const CV_FILENAME = 'Guilherme-Borges-CV.pdf'
 
 /**
  * O Safari do iOS ignora o atributo `download` em links same-origin:
- * o clique não baixa nada. Lá, abrimos o PDF no visualizador do próprio
- * Safari — de lá o usuário usa "Compartilhar → Salvar em Arquivos".
- * Nos outros navegadores (desktop, Android) o `download` nativo funciona,
- * então a função não interfere.
+ * o clique não baixa nada. 
  */
 export function handleCvDownload(event: MouseEvent<HTMLAnchorElement>) {
   const isIos = isIosDevice(
