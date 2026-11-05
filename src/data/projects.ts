@@ -1,5 +1,6 @@
 import previewSparta from '../assets/preview-sparta.png'
 import previewTimer from '../assets/preview-timer.png'
+import previewDtMoney from '../assets/preview-dt-money.png'
 
 export type Project = {
   name: string
@@ -18,7 +19,7 @@ export const projects: Project[] = [
     image: previewSparta,
     alt: 'Logo Projeto Sparta',
     description: 'Aplicação de gestão de hábitos com interface intuitiva e foco em produtividade e desenvolvimento pessoal.',
-    stack: ['React', 'JavaScript', 'CSS Modules'],
+    stack: ['React', 'Typescript', 'CSS Modules'],
     demoUrl: 'https://guiborgesw.github.io/Sparta/',
     githubUrl: 'https://github.com/guiborgesw/Sparta',
     thumbBg: '#f0f0f0',
@@ -32,5 +33,15 @@ export const projects: Project[] = [
     demoUrl: 'https://ignite-timer-eta-lilac.vercel.app/',
     githubUrl: 'https://github.com/guiborgesw/Ignite-Timer',
     thumbBg: '#f0f0f0',
+  },
+  {
+    name: 'DT Money',
+    image: previewDtMoney,
+    alt: 'Interface do projeto DT Money',
+    description: 'Aplicação de controle financeiro para registrar entradas e saídas, com cálculo de saldo em tempo real, busca e histórico de transações.',
+    stack: ['React', 'TypeScript', 'Styled Components'],
+    demoUrl: 'https://guiborgesw.github.io/DT-Money/',
+    githubUrl: 'https://github.com/guiborgesw/DT-Money',
+    thumbBg: '#202024',
   },
 ]
