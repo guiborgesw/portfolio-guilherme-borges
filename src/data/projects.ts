@@ -29,7 +29,7 @@ export const projects: Project[] = [
     alt: 'Logo Projeto Ignite Timer',
     description: 'Aplicação de cronômetro inteligente com interface intuitiva e foco em gestão do tempo, foco e produtividade pessoal.',
     stack: ['React', 'TypeScript', 'Styled Components'],
-    demoUrl: '',
+    demoUrl: 'https://ignite-timer-eta-lilac.vercel.app/',
     githubUrl: 'https://github.com/guiborgesw/Ignite-Timer',
     thumbBg: '#f0f0f0',
   },
